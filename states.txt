@@ -1,0 +1,7 @@
+client states:
+
+-Init
+-Game
+-End
+
+server game states:

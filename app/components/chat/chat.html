@@ -1,0 +1,40 @@
+<form class="form-inline" ng-controller="ChatCtrl">
+  <div class="form-group">
+    <label for="player-name">Your name:</label>
+    <input id="player-name" class="form-control" type="text" ng-model="game.playerName">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="mainAction();" ng-bind="game.mainButton"></button>
+  <div class="row">&nbsp;</div>
+
+  <div class="panel panel-primary" ng-show="game.state !== 'Init'">
+    <div class="panel-heading" id="accordion">
+      <span class="glyphicon glyphicon-comment"></span> Chat/History
+    </div>
+    <div class="panel-collapse">
+      <div class="panel-body">
+        <ul class="chat">
+          <li class="clearfix" ng-repeat="msg in chat" ng-attr-id="{{'chat-' + $index}}">
+            <div class="chat-body clearfix">
+              <div class="header">
+                <strong class="primary-font" ng-bind="msg.from"></strong>
+                <small class="pull-right text-muted">
+                  <span class="glyphicon glyphicon-time"></span>
+                  {{msg.time}}
+                </small>
+              </div>
+              <p ng-bind-html="msg.message"></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="panel-footer">
+        <div class="input-group">
+          <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." ng-model="chatMessage" />
+          <span class="input-group-btn">
+            <button class="btn btn-warning btn-sm" id="btn-chat" ng-click="sendMessage()">Send</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

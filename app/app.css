@@ -1,30 +1,129 @@
-/* app css stylesheet */
+#game-board {
+  border:5px solid #333;
+}
+#game-board td {
+  background:#fff;
+  background:-moz-linear-gradient(top, #fff, #eee);
+  background:-webkit-gradient(linear,0 0, 0 100%, from(#fff), to(#eee));
+  box-shadow:inset 0 0 0 1px #fff;
+  -moz-box-shadow:inset 0 0 0 1px #fff;
+  -webkit-box-shadow:inset 0 0 0 1px #fff;
+  height:40px; text-align:center;
+  vertical-align:middle;
+  width:40px;
+  font-size: 220%;
+}
+#game-board tr:nth-child(odd) td:nth-child(even),
+#game-board tr:nth-child(even) td:nth-child(odd) {
+  background:#ccc;
+  background:-moz-linear-gradient(top, #ccc, #eee);
+  background:-webkit-gradient(linear,0 0, 0 100%, from(#ccc), to(#eee));
+  box-shadow:inset 0 0 10px rgba(0,0,0,.4);
+  -moz-box-shadow:inset 0 0 10px rgba(0,0,0,.4);
+  -webkit-box-shadow:inset 0 0 10px rgba(0,0,0,.4);
+}
 
-.menu {
+b.ball {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 3px auto 0;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 4px rgba(0,0,0,.5);
+  background-image: -webkit-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
+  background-image: -o-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
+  background-image: -ms-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
+  border: 1px solid black;
+}
+b.player0 {
+  background-color: #000000;
+}
+b.player1 {
+  background-color: #ffffff;
+}
+b.player2 {
+  background-color: #3b4ba3;
+}
+b.player3 {
+  background-color: #ee0000;
+}
+b.player4 {
+  background-color: #00ee00;
+}
+b.ball.ng-hide-add, b.ball.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+b.ball.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+.chat {
   list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
+  margin: 0;
   padding: 0;
+}
+.chat li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #B3A9A9;
+}
+.chat li .chat-body p {
+  margin: 0;
+  color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon {
+  margin-right: 5px;
+}
+.panel-body {
+  overflow-y: scroll;
+  height: 300px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+ul.chat li.ng-enter {
+  transition:all linear 1s;
+}
+ul.chat li.ng-enter {
+  opacity:0;
+}
+ul.chat li.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.blinking {
+  opacity: 0;
+  animation: blinkanimate 2s infinite;
+  -moz-animation: blinkanimate 2s infinite;
+  -webkit-animation: blinkanimate 2s infinite;
+  -o-animation: blinkanimate 2s infinite;
+}
+@keyframes blinkanimate {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@-moz-keyframes blinkanimate {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@-webkit-keyframes blinkanimate {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@-o-keyframes blinkanimate {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
 }

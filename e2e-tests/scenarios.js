@@ -1,42 +1,32 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/toc.md */
+describe('Gomoku', function() {
 
-describe('my app', function() {
+  it('should start and play a short game with 2 players', function() {
+    browser.get('/');
+    var browser2 = browser.forkNewDriverInstance(true, true);
+    var element2 = browser2.element;
+    var $2 = browser2.$;
+    var $$2 = browser2.$$;
+    element(by.model('$root.player_name')).clear();
+    element(by.model('$root.player_name')).sendKeys('Alpha');
+    element(by.css('button#change-name')).click();
+    element2(by.model('$root.player_name')).clear();
+    element2(by.model('$root.player_name')).sendKeys('Beta');
+    element2(by.css('button#change-name')).click();
 
+    element(by.id('cell-5-5')).click();
+    element2(by.id('cell-5-6')).click();
+    element(by.id('cell-4-5')).click();
+    element2(by.id('cell-6-6')).click();
+    element(by.id('cell-3-5')).click();
+    element2(by.id('cell-7-7')).click();
+    element(by.id('cell-7-5')).click();
+    element2(by.id('cell-8-8')).click();
+    element(by.id('cell-6-5')).click();
+    element2(by.id('cell-9-9')).click();
 
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
+    browser.driver.sleep(5000);
   });
 
-
-  describe('view1', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#/view1');
-    });
-
-
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
-    });
-
-  });
-
-
-  describe('view2', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#/view2');
-    });
-
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
-    });
-
-  });
 });
