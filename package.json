@@ -17,7 +17,7 @@
     "shelljs": "^0.2.6"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "if [ -d \"$OPENSHIFT_REPO_DIR\" ]; then (export HOME=\"$OPENSHIFT_REPO_DIR\"/..; $(npm bin)/bower install) else ($(npm bin)/bower install) fi",
     "prestart": "npm install",
     "start": "DEBUG=socket.io:socket,socket.io:client node server.js",
     "pretest": "npm install",
