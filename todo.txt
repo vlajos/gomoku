@@ -1,5 +1,4 @@
 on error
-reload-destroy: not OK
 round timeout
 travis
 unit tests

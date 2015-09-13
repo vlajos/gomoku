@@ -174,7 +174,7 @@ GomokuServer.onDisconnect = function(id){
     );
     GomokuServer.destroyGame(gameId);
   }
-  if(GomokuServer.clientWaitingForConnection == id){
+  if(GomokuServer.clientWaitingForConnection.id == id){
     GomokuServer.clientWaitingForConnection = false;
   }
 }
