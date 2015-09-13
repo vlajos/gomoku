@@ -19,6 +19,8 @@ Specifically:
 Other used sources:
  * [Angular seed project](https://github.com/angular/angular-seed)
  * [Socket.IO component for AngularJS](https://github.com/btford/angular-socket-io)
+ * https://blog.openshift.com/paas-websockets/
+ * https://coderwall.com/p/pgk00a/socket-io-and-openshift-websockets
 
 CSS examples:
  * [CSS3 Chess Board](http://designindevelopment.com/css/css3-chess-board/)

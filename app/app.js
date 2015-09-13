@@ -11,7 +11,11 @@ angular.module('Gomoku', [
   'angulartics.google.analytics'
 ]).
 factory('SocketIO', function (socketFactory) {
-  return socketFactory();
+  var options = {};
+  if(document.location.hostname.indexOf('rhcloud.com') !== -1){
+    options.ioSocket = io.connect('http://' + document.location.hostname + ':8000/');
+  }
+  return socketFactory(options);
 })
 .config(function ($analyticsProvider) {
   $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
