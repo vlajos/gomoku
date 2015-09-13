@@ -6,8 +6,14 @@ angular.module('Gomoku', [
   'Gomoku.board',
   'Gomoku.chat',
   'btford.socket-io',
-  'ngAnimate'
+  'ngAnimate',
+  'angulartics',
+  'angulartics.google.analytics'
 ]).
 factory('SocketIO', function (socketFactory) {
   return socketFactory();
+})
+.config(function ($analyticsProvider) {
+  $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+  $analyticsProvider.withAutoBase(true);  /* Records full path */
 });

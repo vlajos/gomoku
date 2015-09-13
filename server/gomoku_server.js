@@ -138,10 +138,7 @@ GomokuServer.onMyStepIs = function(id, step){
     return 1;
   }
   if(
-    step.row < 0 ||
-    step.col < 0 ||
-    step.row >= GomokuServer.height ||
-    step.col >= GomokuServer.width ||
+    typeof game.board[step.row] == 'undefined' ||
     game.board[step.row][step.col] !== null
   ){
     GomokuServer.clients[id].socket.emit('ChatMessage', {message: 'Invalid step.'});

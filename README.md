@@ -14,6 +14,7 @@ Specifically:
  * [Bootstrap](http://getbootstrap.com/)
  * [Protractor](https://angular.github.io/protractor/#/)
  * [Openshift](https://www.openshift.com/)
+ * [Bootlint](https://github.com/twbs/bootlint)
 
 Other used sources:
  * [Angular seed project](https://github.com/angular/angular-seed)
