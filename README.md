@@ -1,6 +1,9 @@
 # Gomoku - five in a row game - multiplayer version
 
+You can try it online on the [openshift cloud](http://gomoku-lajosveres.rhcloud.com/).
+
 Proof of concept project for playing with some interesting technologies.
+
 Specifically:
 
  * [node.js](https://nodejs.org/en/)
@@ -25,7 +28,7 @@ CSS examples:
 
 ### Author
 
-Veres Lajos
+[Lajos Veres](http://lajosveres.com/)
 
 ### Original source
 
