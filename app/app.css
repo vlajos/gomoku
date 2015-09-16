@@ -25,8 +25,8 @@
 
 b.ball {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 80%;
+  height: 80%;
   margin: 3px auto 0;
   border-radius: 50%;
   box-shadow: inset -2px -2px 4px rgba(0,0,0,.5);
@@ -55,9 +55,7 @@ b.ball.ng-hide-add, b.ball.ng-hide-remove {
   transition: all linear 0.5s;
 }
 b.ball.ng-hide {
-  line-height: 0;
   opacity: 0;
-  padding: 0 10px;
 }
 
 .chat {

@@ -1,6 +1,6 @@
 {
   "name": "Gomoku",
-  "description": "Gomoku - five in a row game - multiplayer",
+  "description": "Gomoku - five in a row game - multiplayer, gobang, omok",
   "version": "0.1.0",
   "homepage": "https://github.com/vlajos/gomoku",
   "license": "MIT",

@@ -1,7 +1,7 @@
 {
   "name": "Gomoku",
   "version": "0.1.0",
-  "description": "Gomoku - five in a row game - multiplayer",
+  "description": "Gomoku - five in a row game - multiplayer, gobang, omok",
   "repository": "https://github.com/vlajos/gomoku",
   "author": "Lajos Veres <gomoku@lajosveres.com>",
   "license": "MIT",

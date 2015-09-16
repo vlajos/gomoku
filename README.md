@@ -29,6 +29,10 @@ CSS examples:
  * https://css-tricks.com/snippets/css/keyframe-animation-syntax/
  * http://stackoverflow.com/questions/23458640/how-to-have-css3-animation-to-loop-forever
 
+About the game:
+ * [Wikipedia](https://en.wikipedia.org/wiki/Gomoku)
+ * Alternative names: Gobang, Omok
+
 ### Author
 
 [Lajos Veres](http://lajosveres.com/)
