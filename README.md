@@ -1,6 +1,6 @@
 # Gomoku - five in a row game - multiplayer version
 
-You can try it online on the [openshift cloud](http://gomoku-lajosveres.rhcloud.com/).
+You can try it online on the [openshift cloud](http://gomoku.lajosveres.com/).
 
 Proof of concept project for playing with some interesting technologies.
 
