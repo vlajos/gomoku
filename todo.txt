@@ -1,5 +1,6 @@
 black cursor
 redirect old
+liveness, healthcheck
 
 
 on error

@@ -6,7 +6,7 @@
   "author": "Lajos Veres <gomoku@lajosveres.com>",
   "license": "MIT",
   "scripts": {
-    "prestart": "npm install",
+    "prestart": "npm install && rm -rf app/npm_components && ln -s ../node_modules/ app/npm_components",
     "start": "DEBUG=socket.io:socket,socket.io:client node server.js",
     "pretest": "npm install"
   },
